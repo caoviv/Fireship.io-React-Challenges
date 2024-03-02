@@ -1,5 +1,5 @@
 // import "./App.css";
-import MyComponent from "./components/MyComponent";
+import DisplayChallenge from "./components/DisplayChallenge";
 import Card from "./components/Card";
 import Icon from "./components/Icon";
 import LoadingButton from "./components/LoadingButton";
@@ -19,7 +19,7 @@ function App() {
 
   return (
     <div className="App">
-      <MyComponent />
+      <DisplayChallenge />
       <Card icon={<Icon />}>
         <p>The body of the card</p>
       </Card>
