@@ -6,11 +6,12 @@ import LoadingButton from "./components/LoadingButton";
 import { useState } from "react";
 import { useEffect } from "react";
 import ListOfAnimals from "./components/ListOfAnimals";
+import IncrementButton from "./components/IncrementButton";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const label = <p>Press Me</p>;
-  const handleClick = () => {
+  const handleLoading = () => {
     setIsLoading((current) => !current);
   };
   useEffect(() => {
@@ -25,6 +26,16 @@ function App() {
     console.log(textValue);
   }, [textValue]);
 
+  const [count, setCount] = useState(0);
+  const [prevCount, setPrevCount] = useState(0);
+  const handleIncrement = () => {
+    setPrevCount(count);
+    setCount(count + 1);
+  };
+  useEffect(() => {
+    console.log(count);
+  }, [count]);
+
   return (
     <div className="App">
       <DisplayChallenge />
@@ -34,10 +45,15 @@ function App() {
       <LoadingButton
         loadingState={isLoading}
         label={label}
-        onClick={handleClick}
+        onClick={handleLoading}
       />
       <ListOfAnimals />
       <input type="text " value={textValue} onChange={handleTextChange} />
+      <IncrementButton
+        prevCount={prevCount}
+        count={count}
+        onClick={handleIncrement}
+      />
     </div>
   );
 }
