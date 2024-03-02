@@ -1,5 +1,7 @@
 function DisplayChallenge({ name }) {
-  return <p>Implement a text input that updates the input value and logs the event target.</p>;
+  return (
+    <p>Implement a handleClick() function to handle state using useState().</p>
+  );
 }
 
 export default DisplayChallenge;
