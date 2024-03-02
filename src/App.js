@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+// import "./App.css";
+import MyComponent from "./MyComponent";
+import Card from "./Card";
+import Icon from "./Icon";
+import LoadingButton from "./LoadingButton";
+import { useState } from "react";
+import { useEffect } from "react";
+import ListOfAnimals from "./ListOfAnimals";
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+  const label = <p>Press Me</p>;
+  const handleClick = () => {
+    setIsLoading((current) => !current);
+  };
+  useEffect(() => {
+    console.log(isLoading);
+  }, [isLoading]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <MyComponent />
+      <Card icon={<Icon />}>
+        <p>The body of the card</p>
+      </Card>
+      <LoadingButton
+        loadingState={isLoading}
+        label={label}
+        onClick={handleClick}
+      />
+      <ListOfAnimals />
     </div>
   );
 }
