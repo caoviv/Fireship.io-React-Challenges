@@ -6,7 +6,6 @@ import LoadingButton from "./components/LoadingButton";
 import { useState } from "react";
 import { useEffect } from "react";
 import ListOfAnimals from "./components/ListOfAnimals";
-import TextInput from "./components/TextInput";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -17,6 +16,14 @@ function App() {
   useEffect(() => {
     console.log(isLoading);
   }, [isLoading]);
+
+  const [textValue, setTextValue] = useState("");
+  const handleTextChange = (e) => {
+    setTextValue(e.target.value);
+  };
+  useEffect(() => {
+    console.log(textValue);
+  }, [textValue]);
 
   return (
     <div className="App">
@@ -30,8 +37,7 @@ function App() {
         onClick={handleClick}
       />
       <ListOfAnimals />
-      <TextInput />
-
+      <input type="text " value={textValue} onChange={handleTextChange} />
     </div>
   );
 }
