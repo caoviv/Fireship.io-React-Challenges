@@ -1,11 +1,11 @@
 // import "./App.css";
-import MyComponent from "./MyComponent";
-import Card from "./Card";
-import Icon from "./Icon";
-import LoadingButton from "./LoadingButton";
+import MyComponent from "./components/MyComponent";
+import Card from "./components/Card";
+import Icon from "./components/Icon";
+import LoadingButton from "./components/LoadingButton";
 import { useState } from "react";
 import { useEffect } from "react";
-import ListOfAnimals from "./ListOfAnimals";
+import ListOfAnimals from "./components/ListOfAnimals";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
