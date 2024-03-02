@@ -6,6 +6,7 @@ import LoadingButton from "./components/LoadingButton";
 import { useState } from "react";
 import { useEffect } from "react";
 import ListOfAnimals from "./components/ListOfAnimals";
+import TextInput from "./components/TextInput";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -29,6 +30,8 @@ function App() {
         onClick={handleClick}
       />
       <ListOfAnimals />
+      <TextInput />
+
     </div>
   );
 }
