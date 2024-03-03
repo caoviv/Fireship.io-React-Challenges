@@ -3,10 +3,10 @@ import DisplayChallenge from "./components/DisplayChallenge";
 import Card from "./components/Card";
 import Icon from "./components/Icon";
 import LoadingButton from "./components/LoadingButton";
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import ListOfAnimals from "./components/ListOfAnimals";
 import IncrementButton from "./components/IncrementButton";
+import CountdownTimer from "./components/CountdownTimer";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -54,6 +54,7 @@ function App() {
         count={count}
         onClick={handleIncrement}
       />
+      <CountdownTimer />
     </div>
   );
 }
