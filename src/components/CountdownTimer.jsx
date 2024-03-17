@@ -2,37 +2,20 @@
 import { useEffect, useState } from "react";
 
 function CountdownTimer({ hr, min, sec }) {
-  const [[h, m, s], setTimer] = useState([1, 30, 0]);
+  const [s, setTimer] = useState(60);
 
   const [paused, setPaused] = useState(false);
   const handlePause = () => {
     setPaused((current) => !current);
   };
-  useEffect(() => {
-    let interval;
-    if (!paused) {
-      interval = setInterval(() => {
-        if (s > 0) {
-          setTimer((s) => s - 1);
-        } else if (m > 0) {
-          setTimer((m) => m - 1);
-        }
-      });
-    }
-    return () => clearInterval(interval);
-  }, [paused]);
 
   const handleReset = () => {
-    setTimer({ hr, min, sec });
+    console.log();
   };
-  useEffect(() => {
-    console.log(paused);
-  }, [paused]);
+
   return (
     <div>
-      <p>
-        {[h]}:{[m]}:{[s]}
-      </p>
+      <p>{s}</p>
       <button onClick={handlePause}>
         {paused ? <p>Start</p> : <p>Pause</p>}
       </button>
