@@ -15,10 +15,12 @@ function CountdownTimer({ hr, min, sec }) {
   };
 
   useEffect(() => {
-    if (s > 0) {
-      setTimer(s-1);
-    }
-    console.log("call clearTimeout()");
+    setInterval(() => {
+      if (s > 0) {
+        setTimer(s - 1);
+      }
+      console.log("call clearTimeout()");
+    },1000);
   }, [paused, s]);
 
   return (
