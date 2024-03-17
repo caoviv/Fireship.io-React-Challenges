@@ -18,7 +18,7 @@ function CountdownTimer({ hr, min, sec }) {
     if (s > 0) {
       setTimer(s-1);
     }
-    console.log("Paused state updated");
+    console.log("call clearTimeout()");
   }, [paused, s]);
 
   return (
