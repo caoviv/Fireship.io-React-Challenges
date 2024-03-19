@@ -26,21 +26,23 @@ function CountdownTimer({ hr, min, sec }) {
       return;
     }
     const intervalId = setInterval(() => {
-      if (s === 0) {
-        setTimer([m - 1, 59]);
+      if (m === 0 && s === 0) {
+        setTimer([h - 1, 59, 59]);
+      } else if (s === 0) {
+        setTimer([h, m - 1, 59]);
       } else {
-        setTimer([m, s - 1]);
+        setTimer([h, m, s - 1]);
       }
     }, 1000);
     return () => {
       clearInterval(intervalId);
     };
-  }, [paused, m, s]);
+  }, [paused, h, m, s]);
 
   return (
     <div>
       <p>
-      {timeFormat(h)}:{timeFormat(m)}:{timeFormat(s)}
+        {timeFormat(h)}:{timeFormat(m)}:{timeFormat(s)}
       </p>
       <button onClick={handlePause}>
         {paused ? <p>Start</p> : <p>Pause</p>}
