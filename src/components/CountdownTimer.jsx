@@ -14,7 +14,7 @@ function CountdownTimer({ min, sec }) {
   };
 
   const handleReset = () => {
-    setTimer(sec);
+    setTimer([min, sec]);
   };
 
   useEffect(() => {
@@ -22,18 +22,22 @@ function CountdownTimer({ min, sec }) {
       return;
     }
     const intervalId = setInterval(() => {
-      if (s > 0) {
-        setTimer(s - 1);
+      if (s === 0) {
+        setTimer([m - 1, 59]);
+      } else {
+        setTimer([m, s - 1]);
       }
     }, 1000);
     return () => {
       clearInterval(intervalId);
     };
-  }, [paused, s]);
+  }, [paused, m, s]);
 
   return (
     <div>
-      <p>{m}:{s}</p>
+      <p>
+        {m}:{s}
+      </p>
       <button onClick={handlePause}>
         {paused ? <p>Start</p> : <p>Pause</p>}
       </button>
