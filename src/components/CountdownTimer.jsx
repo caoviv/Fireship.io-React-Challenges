@@ -4,8 +4,8 @@ Make sure you use the useEffect() hook to call clearTimeout() when the component
 */
 import { useEffect, useState } from "react";
 
-function CountdownTimer({ sec }) {
-  const [s, setTimer] = useState(sec);
+function CountdownTimer({ min, sec }) {
+  const [[m, s], setTimer] = useState([min, sec]);
 
   const [paused, setPaused] = useState(true);
 
@@ -33,7 +33,7 @@ function CountdownTimer({ sec }) {
 
   return (
     <div>
-      <p>{s}</p>
+      <p>{m}:{s}</p>
       <button onClick={handlePause}>
         {paused ? <p>Start</p> : <p>Pause</p>}
       </button>
