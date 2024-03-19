@@ -1,5 +1,4 @@
 // import "./App.css";
-import DisplayChallenge from "./components/DisplayChallenge";
 import Card from "./components/Card";
 import Icon from "./components/Icon";
 import LoadingButton from "./components/LoadingButton";
@@ -38,7 +37,6 @@ function App() {
 
   return (
     <div className="App">
-      <DisplayChallenge />
       <Card icon={<Icon />}>
         <p>The body of the card</p>
       </Card>
