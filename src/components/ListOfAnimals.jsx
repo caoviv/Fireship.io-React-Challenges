@@ -12,11 +12,15 @@ const data = [
 
 function ListOfAnimals() {
   return (
-    <ul>
-      {data.map(({ name, id }) => (
-        <li key={id}> {name}</li>
-      ))}
-    </ul>
+    <div>
+      <h2>Loops</h2>
+      <p>Define an array of animals called data. Use a .map() to return a list of all the animals in the data array.</p>
+      <ul>
+        {data.map(({ name, id }) => (
+          <li key={id}> {name}</li>
+        ))}
+      </ul>
+    </div>
   );
 }
 

@@ -47,6 +47,8 @@ function CountdownTimer({ hr, min, sec }) {
 
   return (
     <div>
+      <h2>Countdown Timer</h2>
+      <p>Implement a CountdownTimer component that implements useState() and useEffect() in conjunction with setInterval to handle the timer. Make sure you use the useEffect() hook to call clearTimeout() when the component is destroyed.</p>
       <p>
         {timeFormat(h)}:{timeFormat(m)}:{timeFormat(s)}
       </p>
