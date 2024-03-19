@@ -10,7 +10,7 @@ function CountdownTimer({ hr, min, sec }) {
   const [finished, setFinished] = useState(false);
 
   const handlePause = () => {
-    setPaused((current) => !current);
+    setPaused(!paused);
   };
 
   const handleReset = () => {
