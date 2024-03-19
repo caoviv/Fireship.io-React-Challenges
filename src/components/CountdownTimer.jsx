@@ -15,6 +15,8 @@ function CountdownTimer({ hr, min, sec }) {
 
   const handleReset = () => {
     setTimer([hr, min, sec]);
+    setPaused(true)
+    setFinished(false)
   };
 
   const timeFormat = (number) => {
