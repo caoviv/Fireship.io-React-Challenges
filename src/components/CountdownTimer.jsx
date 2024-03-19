@@ -17,6 +17,10 @@ function CountdownTimer({ min, sec }) {
     setTimer([min, sec]);
   };
 
+  const timeFormat = (number) => {
+    return number.toString().padStart(2, "0");
+  };
+
   useEffect(() => {
     if (paused) {
       return;
@@ -36,7 +40,7 @@ function CountdownTimer({ min, sec }) {
   return (
     <div>
       <p>
-        {m}:{s}
+        {timeFormat(m)}:{timeFormat(s)}
       </p>
       <button onClick={handlePause}>
         {paused ? <p>Start</p> : <p>Pause</p>}
