@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import ListOfAnimals from "./components/ListOfAnimals";
 import IncrementButton from "./components/IncrementButton";
 import CountdownTimer from "./components/CountdownTimer";
+import Context from "./components/Context";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -58,6 +59,7 @@ function App() {
         onClick={handleIncrement}
       />
       <CountdownTimer hr={1} min={30} sec={45} />
+      <Context />
     </div>
   );
 }
