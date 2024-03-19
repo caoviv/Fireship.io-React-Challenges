@@ -1,8 +1,11 @@
-//Define a LoadingButton component. The button takes loading state, onClick, and label as props then renders the label or loader depending on the loading state.
+/*
+Implement a CountdownTimer component that implements useState() and useEffect() in conjunction with setInterval to handle the timer.
+Make sure you use the useEffect() hook to call clearTimeout() when the component is destroyed.
+*/
 import { useEffect, useState } from "react";
 
-function CountdownTimer({ hr, min, sec }) {
-  const [s, setTimer] = useState(60);
+function CountdownTimer({ sec }) {
+  const [s, setTimer] = useState(sec);
 
   const [paused, setPaused] = useState(true);
 
@@ -11,16 +14,21 @@ function CountdownTimer({ hr, min, sec }) {
   };
 
   const handleReset = () => {
-    console.log();
+    setTimer(sec);
   };
 
   useEffect(() => {
-    setInterval(() => {
+    if (paused) {
+      return;
+    }
+    const intervalId = setInterval(() => {
       if (s > 0) {
         setTimer(s - 1);
       }
-      console.log("call clearTimeout()");
-    },1000);
+    }, 1000);
+    return () => {
+      clearInterval(intervalId);
+    };
   }, [paused, s]);
 
   return (
