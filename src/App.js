@@ -54,7 +54,7 @@ function App() {
         count={count}
         onClick={handleIncrement}
       />
-      <CountdownTimer hr={0} min={0} sec={5} />
+      <CountdownTimer hr={1} min={30} sec={45} />
     </div>
   );
 }

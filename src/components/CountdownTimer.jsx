@@ -21,25 +21,27 @@ function CountdownTimer({ hr, min, sec }) {
     return number.toString().padStart(2, "0");
   };
 
-  useEffect(() => {
+  const tick = () => {
     if (paused || finished) {
       return;
     }
-    const intervalId = setInterval(() => {
-      if (h === 0 && m === 0 && s === 0) {
-        setFinished(true);
-      } else if (m === 0 && s === 0) {
-        setTimer([h - 1, 59, 59]);
-      } else if (s === 0) {
-        setTimer([h, m - 1, 59]);
-      } else {
-        setTimer([h, m, s - 1]);
-      }
-    }, 1000);
+    if (h === 0 && m === 0 && s === 0) {
+      setFinished(true);
+    } else if (m === 0 && s === 0) {
+      setTimer([h - 1, 59, 59]);
+    } else if (s === 0) {
+      setTimer([h, m - 1, 59]);
+    } else {
+      setTimer([h, m, s - 1]);
+    }
+  };
+
+  useEffect(() => {
+    const ticker = setInterval(tick, 1000);
     return () => {
-      clearInterval(intervalId);
+      clearInterval(ticker);
     };
-  }, [finished, paused, h, m, s]);
+  });
 
   return (
     <div>
