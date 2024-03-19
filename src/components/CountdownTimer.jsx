@@ -6,8 +6,8 @@ import { useEffect, useState } from "react";
 
 function CountdownTimer({ hr, min, sec }) {
   const [[h, m, s], setTimer] = useState([hr, min, sec]);
-
   const [paused, setPaused] = useState(true);
+  const [finished, setFinished] = useState(false);
 
   const handlePause = () => {
     setPaused((current) => !current);
@@ -22,11 +22,13 @@ function CountdownTimer({ hr, min, sec }) {
   };
 
   useEffect(() => {
-    if (paused) {
+    if (paused || finished) {
       return;
     }
     const intervalId = setInterval(() => {
-      if (m === 0 && s === 0) {
+      if (h === 0 && m === 0 && s === 0) {
+        setFinished(true);
+      } else if (m === 0 && s === 0) {
         setTimer([h - 1, 59, 59]);
       } else if (s === 0) {
         setTimer([h, m - 1, 59]);
@@ -37,7 +39,7 @@ function CountdownTimer({ hr, min, sec }) {
     return () => {
       clearInterval(intervalId);
     };
-  }, [paused, h, m, s]);
+  }, [finished, paused, h, m, s]);
 
   return (
     <div>
