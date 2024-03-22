@@ -7,6 +7,7 @@ import ListOfAnimals from "./components/ListOfAnimals";
 import IncrementButton from "./components/IncrementButton";
 import CountdownTimer from "./components/CountdownTimer";
 import Context from "./components/Context";
+import ErrorBoundaries from "./components/ErrorBoundaries"
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -60,6 +61,7 @@ function App() {
       />
       <CountdownTimer hr={1} min={30} sec={45} />
       <Context />
+      <ErrorBoundaries />
     </div>
   );
 }
