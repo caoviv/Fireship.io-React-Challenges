@@ -1,19 +1,26 @@
-import { useEffect, useState } from "react";
+import React from "react";
 
-function ErrorBoundary() {
-  const [hasError, setHasError] = useState(false);
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: true };
+  }
 
-  useEffect(()=> {
-    if (hasError) {
-        //Log the error or send it to an error tracking service
-        console.error('Error occurred within the ErrorBoundry')
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error, errorInfo) {
+    console.log("Something went horribly wrong", error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return <p>Fallback UI</p>;
     }
-  })
-  return (
-    <div>
-      <h2>Error Boundaries </h2>
-    </div>
-  );
+
+    return this.props.children;
+  }
 }
 
 export default ErrorBoundary;

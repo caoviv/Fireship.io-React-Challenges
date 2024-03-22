@@ -7,7 +7,7 @@ import ListOfAnimals from "./components/ListOfAnimals";
 import IncrementButton from "./components/IncrementButton";
 import CountdownTimer from "./components/CountdownTimer";
 import Context from "./components/Context";
-import ErrorBoundary from "./components/ErrorBoundary"
+import ErrorBoundary from "./components/ErrorBoundary";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -61,7 +61,15 @@ function App() {
       />
       <CountdownTimer hr={1} min={30} sec={45} />
       <Context />
-      <ErrorBoundary />
+      <h1>🚨Error Boundries</h1>
+      <p>
+        Create an ErrorBoundary class component that provides a fallback UI in
+        the event an error occurs.
+      </p>
+      <p>This is outside the Error Boundary</p>
+      <ErrorBoundary>
+        <p>There is no error</p>
+      </ErrorBoundary>
     </div>
   );
 }
