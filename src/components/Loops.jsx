@@ -10,10 +10,10 @@ const data = [
   { id: 7, name: "Kezia Salas 🐴" },
 ];
 
-function ListOfAnimals() {
+function Loops() {
   return (
     <div>
-      <h2>Loops</h2>
+      <h2>➰ Loops</h2>
       <p>Define an array of animals called data. Use a .map() to return a list of all the animals in the data array.</p>
       <ul>
         {data.map(({ name, id }) => (
@@ -24,4 +24,4 @@ function ListOfAnimals() {
   );
 }
 
-export default ListOfAnimals;
+export default Loops;

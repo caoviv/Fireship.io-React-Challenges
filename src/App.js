@@ -3,7 +3,7 @@ import Components from "./components/Components";
 import Icon from "./components/Icon";
 import ConditionalRendering from "./components/ConditionalRendering";
 import { useState, useEffect } from "react";
-import ListOfAnimals from "./components/ListOfAnimals";
+import Loops from "./components/Loops";
 import IncrementButton from "./components/IncrementButton";
 import CountdownTimer from "./components/CountdownTimer";
 import Context from "./components/Context";
@@ -52,7 +52,7 @@ function App() {
         label={label}
         onClick={handleLoading}
       />
-      <ListOfAnimals />
+      <Loops />
       <h2>Events</h2>
       <p>
         Implement a text input that updates the input value and logs the event
