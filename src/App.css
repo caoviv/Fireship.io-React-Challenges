@@ -1,7 +1,5 @@
 .App {
   font-family: "DM Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
   margin: 30px;
 }
 
@@ -17,7 +15,7 @@
 }
 
 .Challenge {
-  width: 360px;
+  width: 280px;
   margin: 16px;
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
@@ -36,6 +34,8 @@
 .ChallengeSolutionWrapper {
   outline-style: solid;
   text-align: center;
+  width: 100%;
+  height: auto;
   padding: 20px;
 }
 
@@ -60,16 +60,11 @@ h1 {
   font-size: 0.8rem;
   letter-spacing: 2px;
   cursor: pointer;
+  margin-block-end: 16px;
 }
 
 .fill {
   filter: drop-shadow(0);
   font-weight: bold;
-  transition: all 0.3s ease;
-}
-
-.fill:hover {
-  transform: scale(1.125);
-  filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.125));
   transition: all 0.3s ease;
 }
