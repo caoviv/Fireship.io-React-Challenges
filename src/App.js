@@ -1,5 +1,5 @@
 // import "./App.css";
-import Card from "./components/Card";
+import Anatomy from "./components/Anatomy";
 import Icon from "./components/Icon";
 import LoadingButton from "./components/LoadingButton";
 import { useState, useEffect } from "react";
@@ -40,9 +40,13 @@ function App() {
 
   return (
     <div className="App">
-      <Card icon={<Icon />}>
-        <p>The body of the card</p>
-      </Card>
+      <h1>Vivian React Challenges Workspace</h1>
+      <p>
+        This is a project space to complete the Fireship.io React challenges
+      </p>
+      <Anatomy icon={<Icon />}>
+        <p>The body of the Anatomy</p>
+      </Anatomy>
       <LoadingButton
         loadingState={isLoading}
         label={label}
