@@ -18,7 +18,7 @@ function Context() {
     const [count, setCount] = useContext(CountContext);
     return (
       <div className="button-wrapper">
-        <button className="btn" onClick={() => setCount(count + 1)}>
+        <button className="btn fill" onClick={() => setCount(count + 1)}>
           Increment
         </button>
       </div>

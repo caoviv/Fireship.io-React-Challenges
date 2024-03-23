@@ -13,7 +13,7 @@ function State(props) {
         <p>Current count:{props.count}</p>
         <p>Previous count:{props.prevCount}</p>
         <div className="button-wrapper">
-          <button className="btn" onClick={props.onClick}>
+          <button className="btn fill" onClick={props.onClick}>
             Increment
           </button>
         </div>
