@@ -24,7 +24,7 @@ function Context() {
   }
   return (
     <div>
-      <h2>Context</h2>
+      <h2>🌲 Context</h2>
       <p>
         Create 'CountContext' and 'CountProvider' that uses{" "}
         {`{(count, setCount)}`} as its values. This will allow the count and
