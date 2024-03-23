@@ -12,7 +12,7 @@ function State(props) {
       <div className="ChallengeSolutionWrapper">
         <p>Current count:{props.count}</p>
         <p>Previous count:{props.prevCount}</p>
-        <button btn onClick={props.onClick}>
+        <button className="btn" onClick={props.onClick}>
           Increment
         </button>
       </div>

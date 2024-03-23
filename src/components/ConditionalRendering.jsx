@@ -12,7 +12,7 @@ function ConditionalRendering(props) {
         </p>
       </div>
       <div className="ChallengeSolutionWrapper">
-        <button btn onClick={props.onClick}>
+        <button className="btn" onClick={props.onClick}>
           {props.loadingState ? props.label : "Loading"}
         </button>
       </div>
