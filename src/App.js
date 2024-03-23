@@ -1,7 +1,7 @@
 // import "./App.css";
 import Components from "./components/Components";
 import Icon from "./components/Icon";
-import LoadingButton from "./components/LoadingButton";
+import ConditionalRendering from "./components/ConditionalRendering";
 import { useState, useEffect } from "react";
 import ListOfAnimals from "./components/ListOfAnimals";
 import IncrementButton from "./components/IncrementButton";
@@ -47,7 +47,7 @@ function App() {
       <Components icon={<Icon />}>
         <p>The body of the Anatomy</p>
       </Components>
-      <LoadingButton
+      <ConditionalRendering
         loadingState={isLoading}
         label={label}
         onClick={handleLoading}
