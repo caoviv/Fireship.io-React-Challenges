@@ -15,8 +15,8 @@ function CountdownTimer({ hr, min, sec }) {
 
   const handleReset = () => {
     setTimer([hr, min, sec]);
-    setPaused(true)
-    setFinished(false)
+    setPaused(true);
+    setFinished(false);
   };
 
   const timeFormat = (number) => {
@@ -48,14 +48,19 @@ function CountdownTimer({ hr, min, sec }) {
   return (
     <div>
       <h2>Countdown Timer</h2>
-      <p>Implement a CountdownTimer component that implements useState() and useEffect() in conjunction with setInterval to handle the timer. Make sure you use the useEffect() hook to call clearTimeout() when the component is destroyed.</p>
+      <p>
+        Implement a CountdownTimer component that implements useState() and
+        useEffect() in conjunction with setInterval to handle the timer. Make
+        sure you use the useEffect() hook to call clearTimeout() when the
+        component is destroyed.
+      </p>
       <p>
         {timeFormat(h)}:{timeFormat(m)}:{timeFormat(s)}
       </p>
-      <button onClick={handlePause}>
+      <button className="Button" onClick={handlePause}>
         {paused ? <p>Start</p> : <p>Pause</p>}
       </button>
-      <button onClick={handleReset}>
+      <button className="Button" onClick={handleReset}>
         <p>Reset</p>
       </button>
     </div>

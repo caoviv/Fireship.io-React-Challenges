@@ -4,10 +4,14 @@ function IncrementButton(props) {
   return (
     <div>
       <h2>State</h2>
-      <p>Implement a handleClick() function to handle state using useState().</p>
+      <p>
+        Implement a handleClick() function to handle state using useState().
+      </p>
       <p>Current count:{props.count}</p>
       <p>Previous count:{props.prevCount}</p>
-      <button onClick={props.onClick}>Increment</button>
+      <button className="Button" onClick={props.onClick}>
+        Increment
+      </button>
     </div>
   );
 }

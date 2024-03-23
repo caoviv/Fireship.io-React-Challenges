@@ -10,7 +10,7 @@ function LoadingButton(props) {
         on the loading state.
       </p>
       <div className="ChallengeSolutionWrapper">
-        <button onClick={props.onClick}>
+        <button className="Button" onClick={props.onClick}>
           {props.loadingState ? props.label : <p>loading</p>}
         </button>
       </div>
