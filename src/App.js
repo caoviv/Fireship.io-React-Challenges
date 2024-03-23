@@ -4,7 +4,7 @@ import Icon from "./components/Icon";
 import ConditionalRendering from "./components/ConditionalRendering";
 import { useState, useEffect } from "react";
 import Loops from "./components/Loops";
-import IncrementButton from "./components/IncrementButton";
+import State from "./components/State";
 import CountdownTimer from "./components/CountdownTimer";
 import Context from "./components/Context";
 import ErrorBoundary from "./components/ErrorBoundary";
@@ -47,7 +47,7 @@ function App() {
       />
       <Loops />
       <Events />
-      <IncrementButton
+      <State
         prevCount={prevCount}
         count={count}
         onClick={handleIncrement}

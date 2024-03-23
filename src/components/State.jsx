@@ -1,9 +1,9 @@
 //Define a LoadingButton component. The button takes loading state, onClick, and label as props then renders the label or loader depending on the loading state.
 
-function IncrementButton(props) {
+function State(props) {
   return (
     <div>
-      <h2>State</h2>
+      <h2>🔄 State</h2>
       <p>
         Implement a handleClick() function to handle state using useState().
       </p>
@@ -16,4 +16,4 @@ function IncrementButton(props) {
   );
 }
 
-export default IncrementButton;
+export default State;
