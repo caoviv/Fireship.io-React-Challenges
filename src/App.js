@@ -5,7 +5,7 @@ import ConditionalRendering from "./components/ConditionalRendering";
 import { useState, useEffect } from "react";
 import Loops from "./components/Loops";
 import State from "./components/State";
-import CountdownTimer from "./components/CountdownTimer";
+import LifecycleAndEffects from "./components/LifecycleAndEffects";
 import Context from "./components/Context";
 import ErrorBoundary from "./components/ErrorBoundary";
 import Events from "./components/Events";
@@ -52,7 +52,7 @@ function App() {
         count={count}
         onClick={handleIncrement}
       />
-      <CountdownTimer hr={1} min={30} sec={45} />
+      <LifecycleAndEffects hr={1} min={30} sec={45} />
       <Context />
       <h1>🚨Error Boundaries</h1>
       <p>

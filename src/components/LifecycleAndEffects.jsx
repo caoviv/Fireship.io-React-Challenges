@@ -4,7 +4,7 @@ Make sure you use the useEffect() hook to call clearTimeout() when the component
 */
 import { useEffect, useState } from "react";
 
-function CountdownTimer({ hr, min, sec }) {
+function LifecycleAndEffects({ hr, min, sec }) {
   const [[h, m, s], setTimer] = useState([hr, min, sec]);
   const [paused, setPaused] = useState(true);
   const [finished, setFinished] = useState(false);
@@ -47,7 +47,7 @@ function CountdownTimer({ hr, min, sec }) {
 
   return (
     <div>
-      <h2>Countdown Timer</h2>
+      <h2>🌱 Lifecycle and Effects</h2>
       <p>
         Implement a CountdownTimer component that implements useState() and
         useEffect() in conjunction with setInterval to handle the timer. Make
@@ -67,4 +67,4 @@ function CountdownTimer({ hr, min, sec }) {
   );
 }
 
-export default CountdownTimer;
+export default LifecycleAndEffects;
