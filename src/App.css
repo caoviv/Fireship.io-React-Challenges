@@ -4,6 +4,8 @@
   font-style: normal;
 }
 
-.ChallengeWrap {
+.ChallengeSolutionWrapper {
   outline-style: solid;
+  text-align: center;
+  padding: 20px;
 }

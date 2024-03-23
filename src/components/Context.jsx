@@ -7,7 +7,7 @@ function Context() {
 
   function Count() {
     return (
-      <div>
+      <div className="ChallengeSolutionWrapper">
         <p>{count}</p>
         <CountButton />
       </div>
