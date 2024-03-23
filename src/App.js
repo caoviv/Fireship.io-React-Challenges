@@ -1,5 +1,5 @@
 // import "./App.css";
-import Anatomy from "./components/Anatomy";
+import Components from "./components/Components";
 import Icon from "./components/Icon";
 import LoadingButton from "./components/LoadingButton";
 import { useState, useEffect } from "react";
@@ -44,9 +44,9 @@ function App() {
       <p>
         This is a project space to complete the Fireship.io React challenges
       </p>
-      <Anatomy icon={<Icon />}>
+      <Components icon={<Icon />}>
         <p>The body of the Anatomy</p>
-      </Anatomy>
+      </Components>
       <LoadingButton
         loadingState={isLoading}
         label={label}
