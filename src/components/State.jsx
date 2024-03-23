@@ -7,11 +7,13 @@ function State(props) {
       <p>
         Implement a handleClick() function to handle state using useState().
       </p>
-      <p>Current count:{props.count}</p>
-      <p>Previous count:{props.prevCount}</p>
-      <button className="Button" onClick={props.onClick}>
-        Increment
-      </button>
+      <div className="ChallengeSolutionWrapper">
+        <p>Current count:{props.count}</p>
+        <p>Previous count:{props.prevCount}</p>
+        <button className="Button" onClick={props.onClick}>
+          Increment
+        </button>
+      </div>
     </div>
   );
 }

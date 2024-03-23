@@ -54,15 +54,17 @@ function LifecycleAndEffects({ hr, min, sec }) {
         sure you use the useEffect() hook to call clearTimeout() when the
         component is destroyed.
       </p>
-      <p>
-        {timeFormat(h)}:{timeFormat(m)}:{timeFormat(s)}
-      </p>
-      <button className="Button" onClick={handlePause}>
-        {paused ? "Start" : "Pause"}
-      </button>
-      <button className="Button" onClick={handleReset}>
-        Reset
-      </button>
+      <div className="ChallengeSolutionWrapper">
+        <p>
+          {timeFormat(h)}:{timeFormat(m)}:{timeFormat(s)}
+        </p>
+        <button className="Button" onClick={handlePause}>
+          {paused ? "Start" : "Pause"}
+        </button>
+        <button className="Button" onClick={handleReset}>
+          Reset
+        </button>
+      </div>
     </div>
   );
 }

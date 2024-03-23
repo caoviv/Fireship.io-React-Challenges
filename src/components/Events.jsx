@@ -15,7 +15,9 @@ function Events() {
         Implement a text input that updates the input value and logs the event
         target.
       </p>
-      <input type="text " value={textValue} onChange={handleTextChange} />
+      <div className="ChallengeSolutionWrapper">
+        <input type="text " value={textValue} onChange={handleTextChange} />
+      </div>
     </div>
   );
 }

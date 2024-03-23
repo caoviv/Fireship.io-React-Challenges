@@ -47,14 +47,10 @@ function App() {
       />
       <Loops />
       <Events />
-      <State
-        prevCount={prevCount}
-        count={count}
-        onClick={handleIncrement}
-      />
+      <State prevCount={prevCount} count={count} onClick={handleIncrement} />
       <LifecycleAndEffects hr={1} min={30} sec={45} />
       <Context />
-      <h1>🚨Error Boundaries</h1>
+      <h2>🚨Error Boundaries</h2>
       <p>
         Create an ErrorBoundary class component that provides a fallback UI in
         the event an error occurs.
