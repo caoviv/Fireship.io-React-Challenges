@@ -4,6 +4,14 @@
   font-style: normal;
 }
 
+.ChallengesWrapper {
+  flex-wrap: wrap;
+}
+
+.Challenge {
+  width: 150px;
+}
+
 .ChallengeSolutionWrapper {
   outline-style: solid;
   text-align: center;

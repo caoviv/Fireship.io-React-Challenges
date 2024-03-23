@@ -2,7 +2,7 @@
 
 function State(props) {
   return (
-    <div>
+    <div className="Challenge">
       <h2>🔄 State</h2>
       <p>
         Implement a handleClick() function to handle state using useState().

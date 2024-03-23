@@ -9,7 +9,7 @@ function Events() {
     console.log(textValue);
   }, [textValue]);
   return (
-    <div>
+    <div className="Challenge">
       <h2>💥 Events</h2>
       <p>
         Implement a text input that updates the input value and logs the event

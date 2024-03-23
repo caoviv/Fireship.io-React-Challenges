@@ -1,6 +1,6 @@
 function Components(props) {
   return (
-    <div>
+    <div className="Challenge">
       <h2>🗃️ Components</h2>
       <p>
         Define a set of 2 components - Card and Icon. the card takes the icon as

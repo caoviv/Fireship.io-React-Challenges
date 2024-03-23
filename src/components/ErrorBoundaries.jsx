@@ -1,7 +1,7 @@
 import ErrorBoundary from "./ErrorBoundary";
 function ErrorBoundaries(props) {
   return (
-    <div>
+    <div className="Challenge">
       <h2>🚨Error Boundaries</h2>
       <p>
         Create an ErrorBoundary class component that provides a fallback UI in

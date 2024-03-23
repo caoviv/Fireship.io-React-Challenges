@@ -2,7 +2,7 @@
 
 function ConditionalRendering(props) {
   return (
-    <div>
+    <div className="Challenge">
       <h2>🔀 Conditional Rendering</h2>
       <p>
         Define a LoadingButton component. The button takes loading state,

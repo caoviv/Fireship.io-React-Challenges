@@ -23,7 +23,7 @@ function Context() {
     );
   }
   return (
-    <div>
+    <div className="Challenge">
       <h2>🌲 Context</h2>
       <p>
         Create 'CountContext' and 'CountProvider' that uses{" "}

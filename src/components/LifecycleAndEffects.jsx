@@ -46,7 +46,7 @@ function LifecycleAndEffects({ hr, min, sec }) {
   });
 
   return (
-    <div>
+    <div className="Challenge">
       <h2>🌱 Lifecycle and Effects</h2>
       <p>
         Implement a CountdownTimer component that implements useState() and

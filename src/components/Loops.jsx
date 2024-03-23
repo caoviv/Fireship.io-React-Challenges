@@ -12,7 +12,7 @@ const data = [
 
 function Loops() {
   return (
-    <div>
+    <div className="Challenge">
       <h2>➰ Loops</h2>
       <p>
         Define an array of animals called data. Use a .map() to return a list of
