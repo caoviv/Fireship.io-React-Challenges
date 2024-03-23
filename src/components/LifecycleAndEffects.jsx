@@ -47,21 +47,23 @@ function LifecycleAndEffects({ hr, min, sec }) {
 
   return (
     <div className="Challenge">
-      <h2>🌱 Lifecycle and Effects</h2>
-      <p>
-        Implement a CountdownTimer component that implements useState() and
-        useEffect() in conjunction with setInterval to handle the timer. Make
-        sure you use the useEffect() hook to call clearTimeout() when the
-        component is destroyed.
-      </p>
+      <div className="ChallengeDescription">
+        <h2>🌱 Lifecycle and Effects</h2>
+        <p>
+          Implement a CountdownTimer component that implements useState() and
+          useEffect() in conjunction with setInterval to handle the timer. Make
+          sure you use the useEffect() hook to call clearTimeout() when the
+          component is destroyed.
+        </p>
+      </div>
       <div className="ChallengeSolutionWrapper">
         <p>
           {timeFormat(h)}:{timeFormat(m)}:{timeFormat(s)}
         </p>
-        <button className="Button" onClick={handlePause}>
+        <button btn onClick={handlePause}>
           {paused ? "Start" : "Pause"}
         </button>
-        <button className="Button" onClick={handleReset}>
+        <button btn onClick={handleReset}>
           Reset
         </button>
       </div>

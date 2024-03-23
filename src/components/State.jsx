@@ -3,14 +3,16 @@
 function State(props) {
   return (
     <div className="Challenge">
-      <h2>🔄 State</h2>
-      <p>
-        Implement a handleClick() function to handle state using useState().
-      </p>
+      <div className="ChallengeDescription">
+        <h2>🔄 State</h2>
+        <p>
+          Implement a handleClick() function to handle state using useState().
+        </p>
+      </div>
       <div className="ChallengeSolutionWrapper">
         <p>Current count:{props.count}</p>
         <p>Previous count:{props.prevCount}</p>
-        <button className="Button" onClick={props.onClick}>
+        <button btn onClick={props.onClick}>
           Increment
         </button>
       </div>

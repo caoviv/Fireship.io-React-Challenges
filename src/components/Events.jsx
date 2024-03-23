@@ -10,11 +10,13 @@ function Events() {
   }, [textValue]);
   return (
     <div className="Challenge">
-      <h2>💥 Events</h2>
-      <p>
-        Implement a text input that updates the input value and logs the event
-        target.
-      </p>
+      <div  className="ChallengeDescription">
+        <h2>💥 Events</h2>
+        <p>
+          Implement a text input that updates the input value and logs the event
+          target.
+        </p>
+      </div>
       <div className="ChallengeSolutionWrapper">
         <input type="text " value={textValue} onChange={handleTextChange} />
       </div>
