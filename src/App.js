@@ -8,6 +8,7 @@ import IncrementButton from "./components/IncrementButton";
 import CountdownTimer from "./components/CountdownTimer";
 import Context from "./components/Context";
 import ErrorBoundary from "./components/ErrorBoundary";
+import "./App.css";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
