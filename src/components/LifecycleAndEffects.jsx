@@ -60,12 +60,16 @@ function LifecycleAndEffects({ hr, min, sec }) {
         <p>
           {timeFormat(h)}:{timeFormat(m)}:{timeFormat(s)}
         </p>
-        <button className="btn" onClick={handlePause}>
-          {paused ? "Start" : "Pause"}
-        </button>
-        <button className="btn" onClick={handleReset}>
-          Reset
-        </button>
+        <div className="button-wrapper">
+          <button className="btn" onClick={handlePause}>
+            {paused ? "Start" : "Pause"}
+          </button>
+        </div>
+        <div className="button-wrapper">
+          <button className="btn" onClick={handleReset}>
+            Reset
+          </button>
+        </div>
       </div>
     </div>
   );

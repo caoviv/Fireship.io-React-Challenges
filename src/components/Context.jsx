@@ -17,9 +17,11 @@ function Context() {
   function CountButton() {
     const [count, setCount] = useContext(CountContext);
     return (
-      <button className="btn" onClick={() => setCount(count + 1)}>
-        Increment
-      </button>
+      <div className="button-wrapper">
+        <button className="btn" onClick={() => setCount(count + 1)}>
+          Increment
+        </button>
+      </div>
     );
   }
   return (
