@@ -58,10 +58,10 @@ function CountdownTimer({ hr, min, sec }) {
         {timeFormat(h)}:{timeFormat(m)}:{timeFormat(s)}
       </p>
       <button className="Button" onClick={handlePause}>
-        {paused ? <p>Start</p> : <p>Pause</p>}
+        {paused ? "Start" : "Pause"}
       </button>
       <button className="Button" onClick={handleReset}>
-        <p>Reset</p>
+        Reset
       </button>
     </div>
   );
