@@ -1,4 +1,4 @@
-function Card(props) {
+function Components(props) {
   return (
     <div>
       <h2>🗃️ Components</h2>
@@ -14,4 +14,4 @@ function Card(props) {
   );
 }
 
-export default Card;
+export default Components;
