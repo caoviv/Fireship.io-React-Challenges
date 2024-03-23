@@ -12,7 +12,7 @@ import "./App.css";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
-  const label = <p>Press Me</p>;
+  const label = "Press Me";
   const handleLoading = () => {
     setIsLoading((current) => !current);
   };
