@@ -8,6 +8,7 @@ import IncrementButton from "./components/IncrementButton";
 import CountdownTimer from "./components/CountdownTimer";
 import Context from "./components/Context";
 import ErrorBoundary from "./components/ErrorBoundary";
+import Events from "./components/Events";
 import "./App.css";
 
 function App() {
@@ -19,14 +20,6 @@ function App() {
   useEffect(() => {
     console.log(isLoading);
   }, [isLoading]);
-
-  const [textValue, setTextValue] = useState("");
-  const handleTextChange = (e) => {
-    setTextValue(e.target.value);
-  };
-  useEffect(() => {
-    console.log(textValue);
-  }, [textValue]);
 
   const [count, setCount] = useState(0);
   const [prevCount, setPrevCount] = useState(0);
@@ -45,7 +38,7 @@ function App() {
         This is a project space to complete the Fireship.io React challenges
       </p>
       <Components icon={<Icon />}>
-        <p>The body of the Anatomy</p>
+        <p>The body of the the component</p>
       </Components>
       <ConditionalRendering
         loadingState={isLoading}
@@ -53,12 +46,7 @@ function App() {
         onClick={handleLoading}
       />
       <Loops />
-      <h2>Events</h2>
-      <p>
-        Implement a text input that updates the input value and logs the event
-        target.
-      </p>
-      <input type="text " value={textValue} onChange={handleTextChange} />
+      <Events />
       <IncrementButton
         prevCount={prevCount}
         count={count}
