@@ -7,11 +7,12 @@
   display: flex;
   justify-content: center;
   list-style: none;
-  align-items: center;
+  align-items: flex-start;
   gap: 20px;
   margin: 2%;
   flex-wrap: wrap;
   height: 100vh;
+  column-gap: 10px;
 }
 
 .Challenge {
