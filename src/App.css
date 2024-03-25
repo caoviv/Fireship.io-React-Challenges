@@ -3,6 +3,10 @@
   margin: 30px;
 }
 
+body {
+  background-image: url("../public/background.jpg");
+}
+
 .ChallengesWrapper {
   display: flex;
   justify-content: center;

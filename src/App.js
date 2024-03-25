@@ -35,7 +35,7 @@ function App() {
     <div className="App">
       <h1>Vivian React Challenges Workspace</h1>
       <p>
-        This is a project space to complete the Fireship.io React challenges
+        This is a project space to complete the Fireship.io React challenges. Image by <a href="https://www.freepik.com/free-vector/white-abstract-background_11852424.htm">Freepik</a>
       </p>
       <div className="ChallengesWrapper">
         <Components icon={<Icon />}>
